@@ -1,0 +1,126 @@
+.services{
+    margin: 0;
+    overflow: hidden;
+    .left_section{
+        position: relative;
+        left: 200px;
+        z-index: 2;
+        img {
+            width: 70%;
+        }
+
+    }
+    .right_section{
+        background-color: #000000;
+        color: #ffffff;
+        position: relative;
+        top: 80px;
+        padding:100px 100px 200px 100px;
+        h3 {
+            font-size: 20px;
+            font-weight: 200;
+            padding-bottom: 30px;
+        }
+        h2{
+            font-size: 80px;
+            font-weight: 900;
+        }
+        p {
+            font-size: 15px;
+            padding-right: 125px;
+        }
+        .outer_box {
+            padding: 60px 400px 0 0;
+            align-items: flex-start;
+            .button{
+                text-align: center;
+                border: 2px solid #ffffff;
+                padding: 10px 40px;
+                a {
+                    text-decoration: none;
+                    color: #ffffff;
+                }
+            }
+        }
+        .change_bar{
+            padding: 30px 0;
+            .switch_bar{
+                height: 90px;
+                width: 4px;
+                background-color: grey;
+                border: none;
+                cursor: pointer;
+            }
+
+            .switch_bar.active{
+                background-color: #ffffff;
+            }
+            p {
+                font-size: 10px;
+                padding-right: 6px;
+            }
+            button{
+                height: 30px;
+                width: 1px;
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+            }
+            
+        }
+        
+       
+    }
+}
+
+@media (max-width: 750px){
+    .services{
+        .left_section{
+            display: block;
+            left: 0;
+            img{
+                width: 100%;
+            }
+        }
+        .right_section{
+            display: block;
+            top: 0;
+            padding: 50px;
+            p{
+                padding-right: 0;
+            }
+            .outer_box{
+                padding: 20px;
+                .button{
+                    padding: 10px 20px;
+                    a {
+                        font-size: 20px;
+                    }
+                }
+            }
+            .change_bar{
+                padding: 30px 0;
+                .switch_bar{
+                    height: 10px;
+                    width: 100%;
+                    background-color: grey;
+                    border: none;
+                    cursor: pointer;
+                }
+    
+                
+                p {
+                    font-size: 10px;
+                    padding-right: 6px;
+                }
+                button{
+                    height: 10px;
+                    width: 100%;
+                    background-color: transparent;
+                    border: none;
+                    cursor: pointer;
+                }
+            }  
+        }
+    }
+}

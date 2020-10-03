@@ -1,0 +1,38 @@
+$dinkbit-color: #018cf2;
+
+.hamburguer {
+    height: 100%;
+    background: $dinkbit-color;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70%;
+    max-width: 400px;
+    color: #ffff;
+    z-index: 200;
+    ul {
+        height: 100%;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        li{
+            margin: .5rem 0;
+            a{
+                font-weight: 400;
+                font-size: 1.2rem;
+                text-decoration: none;
+                color: #ffff;;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 768px){
+    .hamburguer{
+        display: none;
+    }
+}
+

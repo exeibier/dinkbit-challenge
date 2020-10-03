@@ -1,0 +1,22 @@
+.indicators_container{
+    margin-top: 100px;
+    .indicators_box{
+        text-align: center;
+        .indicators_img{
+            img{
+                width: 50%;
+            }
+        }
+        .indicators_num{
+            span{
+                font-size: 60px;
+                font-weight: 900;
+            }
+        }
+        p{
+            font-size: 25px;
+            color: gray;
+        }
+        
+    }
+}

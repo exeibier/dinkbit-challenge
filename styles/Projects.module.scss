@@ -1,0 +1,53 @@
+$dinkbit-color: #018cf2;
+
+.projects_container{
+    margin-top: 50px;
+    .project_box{
+        h3 {
+            font-size: 20px;
+            font-weight: 300;
+            color: gray;
+            letter-spacing: .2rem;
+        }
+        h2{
+            font-size: 80px;
+            font-weight: 900;
+        }
+        .button_projects{
+            border: solid 2px $dinkbit-color;
+            text-align: center;
+            background-color: $dinkbit-color;
+            color: #ffffff;
+            padding: 10px 80px;
+            display: inline-block;
+            margin: 0 20%;
+            a{
+                font-size: 20px;
+                text-decoration: none;
+                color: #ffffff;
+                width: 100%;
+            }
+        }
+        .single_project{
+            h2{
+                font-size: 30px;
+                font-weight: 800;
+            }
+            p{
+                color: gray;
+
+            }
+        }
+    }
+}
+
+@media (max-width: 750px){
+    .projects_container{
+        .project_box{
+            h2 {
+                font-size: 50px;
+               
+            }
+        }
+    }   
+}
