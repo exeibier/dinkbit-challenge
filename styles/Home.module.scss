@@ -1,0 +1,21 @@
+$dinkbit-color: #018cf2;
+.title{
+    background-image: url('../public/HOME/Hero/hero-home-01.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%; 
+    text-align: center;
+    padding-top: 200px;
+
+    p {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 80px;
+        font-weight: 800;
+    }
+   
+}
+

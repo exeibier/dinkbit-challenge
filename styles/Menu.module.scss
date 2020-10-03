@@ -1,0 +1,63 @@
+$dinkbit-color: #018cf2;
+
+.menu {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    .menuNav{
+        display: flex;
+        align-items: center;
+        padding: 0 1rem;
+        .menuLogo{
+            margin-left: 1rem;
+            img{
+                width: 8rem;
+            }
+            a{
+                text-decoration: none;
+                font-size: 1.5rem;
+            }
+        }
+        .menuItems {
+            a {
+                text-decoration: none; 
+                font-size: 15px;
+            }
+            a:hover {
+                color: $dinkbit-color;
+            }
+            ul{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+
+                li{
+                    padding: 0 1.5rem;
+                }
+            }
+        }
+        .spacer {
+            flex: 1;
+        }
+    
+    }
+}
+
+@media (max-width: 768px){
+    .menuItems{
+        display: none;
+    }
+}
+
+@media (min-width: 768px){
+    .menuLogo{
+        margin-left: 0;
+    }
+    .menu_toggle_button{
+        display: none;
+    }
+}
+
+
