@@ -1,28 +1,28 @@
-import React from 'react';
+import React from 'react'
 
-import styles from '../../styles/MoreBlogs.module.scss';
-const MoreBlogs = () => {
+import styles from '../../styles/MoreBlogs.module.scss'
+export default function MoreBlogs ({ blogsText, blog }) {
   return (
     <div className={`${styles.more_container} container`}>
       <div className={styles.more_title}>
-        <h2>Compartimos lo que sabemos</h2>
+        <h2>{blogsText}</h2>
       </div>
       <div className={`${styles.more_blogs_box} row`}>
         <div className={`${styles.single_blog_wrapper} col-12 col-lg-6`}>
           <div className={`${styles.single_blog_box} row`}>
             <div className={`${styles.single_blog_img} col-4`}>
-              <img src='HOME/hero/blog.png' />
+              <img src={blog[2].fields.image[0].url} />
             </div>
             <div className={`${styles.single_blog_title} col-8`}>
               <a href='#'>
-                Las mejores prácticas para el diseño UX/UI de tu web
+                {blog[2].fields.title}
               </a>
               <div className={styles.single_blog_author}>
                 <div className={styles.author_img}>
                   <img src='HOME/Equipo/escorza.svg' />
                 </div>
                 <div className={styles.author_name}>
-                  <p>Por Jorge V.</p>
+                  <p>Por {blog[2].fields.authorName}</p>
                 </div>
               </div>
             </div>
@@ -31,18 +31,18 @@ const MoreBlogs = () => {
         <div className={`${styles.single_blog_wrapper} col-12 col-lg-6`}>
           <div className={`${styles.single_blog_box} row`}>
             <div className={`${styles.single_blog_img} col-4`}>
-              <img src='HOME/hero/blog.png' />
+              <img src={blog[1].fields.image[0].url} />
             </div>
             <div className={`${styles.single_blog_title} col-8`}>
               <a href='#'>
-                Las mejores prácticas para el diseño UX/UI de tu web
+                {blog[1].fields.title}
               </a>
               <div className={styles.single_blog_author}>
                 <div className={styles.author_img}>
-                  <img src='HOME/Equipo/escorza.svg' />
+                  <img src={blog[1].fields.authorImage[0].url} />
                 </div>
                 <div className={styles.author_name}>
-                  <p>Por Jorge V.</p>
+                  <p>Por {blog[1].fields.authorName}</p>
                 </div>
               </div>
             </div>
@@ -55,5 +55,3 @@ const MoreBlogs = () => {
     </div>
   )
 }
-
-export default MoreBlogs
