@@ -1,26 +1,18 @@
 import React, { Component } from "react";
 
-import styles from '../styles/Home.module.scss'
-import {table, minifyRecords} from '../pages/api/utils/Airtable'
-
-
+import {table, minifyRecords} from './api/utils/Airtable'
 //Import components
 import Layout from '../components/Layout'
 import Menu from '../components/Menu/Menu'
 import Hamburguer from '../components/Hamburguer/Hamburger';
 import Drop from '../components/Drop/Drop'
-import Services from '../components/SectionServices/Services'
-import Projects from '../components/Projects/Projects'
-import About from '../components/About/About'
-import Clients from '../components/Clients/Clients'
-import Shop from '../components/Shop/Shop'
-import Indicators from '../components/Indicators/Indicators'
+import SingleBlog from '../components/SingleBlog/SingleBlog'
 import MoreBlogs from '../components/MoreBlogs/MoreBlogs'
-import ContactUs from '../components/ContactUs/ContactUs'
 import Footer from '../components/Footer/Footer'
 
 
-class Home extends Component {
+
+class BlogPage extends Component {
   constructor(props){
     super(props)
     console.log(props.allBlogs)
@@ -28,6 +20,7 @@ class Home extends Component {
   state = {
     sideButtonOpener: false
   };
+
   hamburguerToggleHandler = () =>{
     this.setState((prevState) =>{
       return{ sideButtonOpener: !prevState.sideButtonOpener}
@@ -50,23 +43,13 @@ class Home extends Component {
         {sideButton}
         {backdrop }
         <Layout>
-          <div className={styles.title}>
-            <p>dinkbit es un Equipo Creativo</p>
-            <h2>Hacemos cosas<br/>increíbles</h2>
-          </div>
-          <Services/>
-          <Projects/>
-          <About/>
-          <Clients/>
-          <Shop/>
-          <Indicators/>
+          <SingleBlog />
           <MoreBlogs
-            blogsText ='Compartimos lo que sabemos'
+            blogsText ='Artículos relacionados'
             key={this.props.allBlogs}
             blog={this.props.allBlogs}
           />
-          <ContactUs/>
-          <Footer/>
+          <Footer />
         </Layout>
         
       </div>
@@ -75,7 +58,7 @@ class Home extends Component {
 
 }
 
-export default Home;
+export default BlogPage;
 
 export async function getServerSideProps(context){
   try {

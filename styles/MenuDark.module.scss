@@ -5,6 +5,7 @@ $dinkbit-color: #018cf2;
     position: fixed;
     top: 0;
     right: 0;
+    z-index: 999;
     .menuNav{
         display: flex;
         align-items: center;
@@ -21,13 +22,12 @@ $dinkbit-color: #018cf2;
         }
         .menuItems {
             a {
+                color: #ffffff;
                 text-decoration: none; 
-                color: #000000;
                 font-size: 15px;
             }
             a:hover {
                 color: $dinkbit-color;
-                border-bottom: 2px solid $dinkbit-color;
             }
             ul{
                 list-style-type: none;

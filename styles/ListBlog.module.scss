@@ -1,0 +1,48 @@
+.blogs{
+    border-bottom: 1px solid gray;
+    .blog_img{
+        padding: 50px;
+        img{
+            width: 100%;
+        }
+    }
+    .blog_text{
+        padding:0 50px;
+        a{
+            text-decoration: none;
+            h2{
+                color: #000000;
+                font-weight: bold;
+            }
+            p{
+                font-size: 20px;
+                font-weight: lighter;
+                color: gray;
+            }
+        }
+       
+    }
+    .blog_author_wrapper{
+        padding: 0 50px;
+        .author_img{
+            padding:20px;
+            img{
+                width:40%;
+            }
+        }
+        .author_text{
+            padding:20px;
+            p{
+                margin:0;
+                
+            }
+            .author_name{
+                font-weight: bold;
+            }
+            .author_date{
+                color: grey;
+            }
+        }
+    }
+
+}

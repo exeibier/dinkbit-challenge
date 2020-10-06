@@ -19,3 +19,12 @@ $dinkbit-color: #018cf2;
    
 }
 
+@media (max-width: 750px){
+    .title{
+        h2 {
+            font-size: 60px;
+        }
+       
+    }
+}
+

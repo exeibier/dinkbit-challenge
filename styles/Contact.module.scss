@@ -1,0 +1,121 @@
+$dinkbit-color: #018cf2;
+
+.contact_container{
+    background-image:linear-gradient( rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5) ), url('../public/HOME/Hero/hero-home-01.png');
+    background-repeat: no-repeat;
+    background-size: 80%;
+    width: 100%; 
+    text-align: center;
+    padding: 150px 0;
+ 
+    h2 {
+        font-size: 80px;
+        font-weight: 800;
+    }
+    h3{
+        font-size: 17px;
+        font-weight: 300;
+        color: gray;
+        padding-top: 20px ;
+
+    }
+    .contact_form{
+        text-align: left;
+        padding: 50px 0;
+        margin: 0 20%;
+        input{
+            border-radius: 1px;
+            height: 50px;
+        }
+        input:focus{
+            outline: none;
+            border:2px solid $dinkbit-color;
+            box-shadow: 0 0 10px $dinkbit-color;
+        }
+
+        select{
+            border-radius: 1px;
+            height: 50px;
+        }
+        select:focus{
+            outline: none;
+            border:2px solid $dinkbit-color;
+            box-shadow: 0 0 10px $dinkbit-color;
+
+        }
+        textarea{
+            border-radius: 1px;
+        }
+        textarea:focus{
+            outline: none;
+            border:2px solid $dinkbit-color;
+            box-shadow: 0 0 10px $dinkbit-color;
+
+        }
+        .captcha_box{
+            padding: 20px 25%;
+        }
+        .contact_button{
+            text-align: center;
+            button{
+                border-radius: 1px;
+                padding:0 70px;
+                font-weight: bold;
+                height: 50px;
+                background-color: $dinkbit-color;
+            }
+        }
+      
+    }
+    .terms{
+        p{
+            color: gray;
+            a{
+                font-size: 1rem;
+                color: $dinkbit-color;
+                border-bottom: $dinkbit-color;
+            }
+        }
+    }
+}
+
+@media (max-width:750px){
+    .contact_container{
+        background-size: 100%;
+        padding: 100px 0;
+     
+        h2 {
+            font-size: 50px;
+        }
+        h3{
+            font-size: 15px;
+            font-weight: 300;
+        }
+        .contact_form{
+            padding: 0;
+            margin: 0;
+            .contact_button{
+                text-align: center;
+                button{
+                    border-radius: 1px;
+                    padding:0 70px;
+                    font-weight: bold;
+                    height: 50px;
+                    background-color: $dinkbit-color;
+                }
+            }
+          
+        }
+        .terms{
+            padding: 30px 0;
+            p{
+                color: gray;
+                a{
+                    font-size: 1rem;
+                    color: $dinkbit-color;
+                    border-bottom: $dinkbit-color;
+                }
+            }
+        }
+    }
+}

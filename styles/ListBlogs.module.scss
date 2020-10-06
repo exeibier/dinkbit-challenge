@@ -1,0 +1,51 @@
+.list_blog_content{
+    margin-top: 50px;
+    .sidebar{        
+    position: sticky;
+    order: 2;
+        .sidebar_search{
+            padding: 20px 0;
+            border-bottom: 1px solid lightgray;
+        }
+        .sidebar_content{
+            padding-top: 10px;
+            border-bottom: 1px solid lightgray;
+            p{
+                font-weight: bold;
+            }
+        }
+        .sidebar_populars{
+            padding-top: 5px;
+            p{
+                font-weight: bold;
+            }
+            .single_popular{
+                p.number{
+                    padding: 13px 0;
+                    color: lightgray;
+                    font-size: 30px;
+                    font-weight: normal;
+                }
+                .title_wrap{
+                    padding:20px;
+                    a{
+                        text-decoration: none;
+                        color: #000000;
+                        p.title_popular{
+                            font-size: 15px;
+        
+                        }
+                    }
+                    
+                    p.date_popular{
+                        color: lightgray;
+                        font-size: 15px;
+
+                    }
+                }
+               
+            }
+        }
+    }
+    
+}
