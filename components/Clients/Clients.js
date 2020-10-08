@@ -23,24 +23,24 @@ const Clients = () => {
         </div>
         <div className={`${styles.clients_img} col-12 col-lg-6`}>
           <ClientsRow
-            clientsImg1='/Home/clientes/normas.png'
-            clientsImg2='/Home/clientes/klm.png'
-            clientsImg3='/Home/clientes/rb.png'
+            clientsImg1='normas.png'
+            clientsImg2='klm.png'
+            clientsImg3='rb.png'
           />
           <ClientsRow
-            clientsImg1='/Home/clientes/sb.png'
-            clientsImg2='/Home/clientes/dibya.png'
-            clientsImg3='/Home/clientes/jac.png'
+            clientsImg1='sb.png'
+            clientsImg2='dibya.png'
+            clientsImg3='jac.png'
           />
           <ClientsRow
-            clientsImg1='/Home/clientes/bt.png'
-            clientsImg2='/Home/clientes/sp.jpg'
-            clientsImg3='/Home/clientes/airfrance.png'
+            clientsImg1='bt.png'
+            clientsImg2='sp.jpg'
+            clientsImg3='airfrance.png'
           />
           <ClientsRow
-            clientsImg1='/Home/clientes/eco.png'
-            clientsImg2='/Home/clientes/pak.png'
-            clientsImg3='/Home/clientes/9rounds.png'
+            clientsImg1='eco.png'
+            clientsImg2='pak.png'
+            clientsImg3='9rounds.png'
           />
 
         </div>
