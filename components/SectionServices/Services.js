@@ -1,55 +1,56 @@
-import React,{ Component } from 'react'
-import styles from '../../styles/Services.module.scss'
+import React, { Component } from 'react'
+
+import DesignServices from './DesignServices'
+import DevService from './DevService'
+import MktService from './MktService'
 
 class Services extends Component {
-    render (){
-        return(
-            <div className={`${styles.services} row`}>
-              <div className = {`${styles.left_section} col-12 col-lg-4`}>
-                <img src='/HOME/servicios/diseño.jpg'/>
-              </div>   
-              <div className={`${styles.right_section} col-12 col-lg-8`}>
-                  <div className='d-block d-lg-flex'>
-                    <div>
-                        <h3>¿QUÉ HACEMOS?</h3>
-                        <h2>Diseño</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit platea in fermentum luctus,
-                            sociosqu gravida diam vivamus libero torquent conubia dignissim faucibus euismod, purus 
-                            at feugiat blandit turpis massa inceptos molestie mauris vel.
-                        </p>
-                        <div className={styles.outer_box}>
-                            <div className={styles.button}>
-                                <a href='#'>Ver más</a>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div className={`${styles.change_bar} d-block d-lg-flex flex-column`}>
-                        <div className={`d-block d-lg-flex justify-content-between`}>
-                            <p>Diseño</p>
-                            <div className={`${styles.switch_bar} ${styles.active}`}>
-                                <button></button>
-                            </div>  
-                        </div>
-                        <div className={`d-block d-lg-flex justify-content-around`}>
-                            <p>Desarrollo</p>
-                            <div className={`${styles.switch_bar}`}>
-                                <button></button>
-                            </div>  
-                        </div>
-                        <div className={`d-block d-lg-flex justify-content-around`}>
-                            <p>Marketing</p>
-                            <div className={`${styles.switch_bar}`}>
-                                <button></button>
-                            </div>  
-                        </div>
-                    </div>
-                  </div>
-  
-              </div>
-          </div> 
-        );
+  constructor (props) {
+    super(props)
+    this.state = {
+      design: true,
+      dev: false,
+      mkt: false
     }
+    this.handleDesign = this.handleDesign.bind(this)
+    this.handleDev = this.handleDev.bind(this)
+    this.handleMkt = this.handleMkt.bind(this)
+  }
+
+  handleDev () {
+    this.setState({
+      design: false,
+      dev: true,
+      mkt: false
+    })
+  }
+
+  handleDesign () {
+    this.setState({
+      design: true,
+      dev: false,
+      mkt: false
+    })
+  }
+
+  handleMkt () {
+    this.setState({
+      design: false,
+      dev: false,
+      mkt: true
+    })
+  }
+
+  render () {
+    return (
+      <div id='services'>
+        {this.state.design ? <DesignServices onHandleDesign={this.handleDesign} onHandleDev={this.handleDev} onHandleMkt={this.handleMkt} design={this.state.design} /> : null}
+        {this.state.dev ? <DevService onHandleDev={this.handleDev} onHandleDesign={this.handleDesign} onHandleMkt={this.handleMkt} dev={this.state.dev} /> : null}
+        {this.state.mkt ? <MktService onHandleMkt={this.handleMkt} onHandleDesign={this.handleDesign} onHandleDev={this.handleDev} mkt={this.state.mkt} /> : null}
+
+      </div>
+    )
+  }
 };
 
 export default Services

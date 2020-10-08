@@ -5,6 +5,9 @@ $dinkbit-color: #018cf2;
     position: fixed;
     top: 0;
     right: 0;
+    background-color: #ffffff;
+    z-index: 9999;
+    padding-bottom: 20px;
     .menuNav{
         display: flex;
         align-items: center;
@@ -20,40 +23,65 @@ $dinkbit-color: #018cf2;
             }
         }
         .menuItems {
-            a {
-                text-decoration: none; 
-                color: #000000;
-                font-size: 15px;
-            }
-            a:hover {
-                color: $dinkbit-color;
-                border-bottom: 2px solid $dinkbit-color;
-            }
             ul{
                 list-style-type: none;
-                margin: 0;
-                padding: 0;
+                margin-top: 20px;
+                padding-top: 10px;
                 display: flex;
 
                 li{
-                    padding: 0 1.5rem;
+                    margin: 10px 1.5rem;
+                    text-decoration: none; 
+                    color: #000000;
+                    font-size: 15px;
                 }
+                li:hover{
+                    border-bottom: 2px solid $dinkbit-color;
+                    cursor: pointer;
+                }
+                .other_items{
+                    display: flex;
+                    li{
+                        margin: 10px 1.5rem;
+                        a{
+                            font-size: 15px;
+                            color: #000000;
+                            text-decoration: none;
+                        }
+                        .contact_menu{
+                            a:hover{
+                                color: $dinkbit-color;
+                            }
+                        }
+                       
+                        .blog_menu{
+                             background-color: $dinkbit-color;
+                             padding: 10px 20px;
+                             color: #ffffff;
+                        }
+
+                    }
+
+                }
+               
             }
+            
         }
         .spacer {
             flex: 1;
         }
+
     
     }
 }
 
-@media (max-width: 768px){
+@media (max-width: 765px){
     .menuItems{
         display: none;
     }
 }
 
-@media (min-width: 768px){
+@media (min-width: 765px){
     .menuLogo{
         margin-left: 0;
     }

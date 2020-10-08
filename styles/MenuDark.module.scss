@@ -6,6 +6,8 @@ $dinkbit-color: #018cf2;
     top: 0;
     right: 0;
     z-index: 999;
+    background-color: #1a1a1a;
+    padding-bottom: 20px;
     .menuNav{
         display: flex;
         align-items: center;
@@ -27,16 +29,25 @@ $dinkbit-color: #018cf2;
                 font-size: 15px;
             }
             a:hover {
-                color: $dinkbit-color;
+                border-bottom: 2px solid #ffffff;
+
             }
             ul{
                 list-style-type: none;
-                margin: 0;
-                padding: 0;
+                margin-top: 20px;
+                padding-top: 10px;
                 display: flex;
 
                 li{
-                    padding: 0 1.5rem;
+                    margin: 10px 1.5rem;
+                }
+                .blog_menu{
+                    background-color: #ffffff;
+                    padding: 5px 20px;
+                    margin: 5px 0;
+                    a{
+                        color: $dinkbit-color;
+                    };
                 }
             }
         }

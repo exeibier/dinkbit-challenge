@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import styles from '../styles/Home.module.scss'
 import {table, minifyRecords} from '../pages/api/utils/Airtable'
-
+import TextLoop from 'react-text-loop'
 
 //Import components
 import Layout from '../components/Layout'
@@ -23,11 +23,11 @@ import Footer from '../components/Footer/Footer'
 class Home extends Component {
   constructor(props){
     super(props)
-    console.log(props.allBlogs)
+    this.state = {
+      sideButtonOpener: false
+
+    }
   }
-  state = {
-    sideButtonOpener: false
-  };
   hamburguerToggleHandler = () =>{
     this.setState((prevState) =>{
       return{ sideButtonOpener: !prevState.sideButtonOpener}
@@ -52,7 +52,13 @@ class Home extends Component {
         <Layout>
           <div className={styles.title}>
             <p>dinkbit es un Equipo Creativo</p>
-            <h2>Hacemos cosas<br/>increíbles</h2>
+            <TextLoop
+            mask={true}  
+            >
+              <h2>Hacemos</h2>
+              <h2>Creamos</h2>
+            </TextLoop>
+            <h2>cosas increíbles</h2>
           </div>
           <Services/>
           <Projects/>
@@ -61,12 +67,23 @@ class Home extends Component {
           <Shop/>
           <Indicators/>
           <MoreBlogs
-            blogsText ='Compartimos lo que sabemos'
-            key={this.props.allBlogs}
-            blog={this.props.allBlogs}
+            blogsText ={'Compartimos lo que sabemos'}
+            img = {'HOME/Hero/blog.png'}
+            title = {'Las mejores prácticas UX/UI'}
+            authorImg = {'HOME/Equipo/escorza.svg'}
+            authorName = {'Escorza'}
+
           />
           <ContactUs/>
-          <Footer/>
+          <Footer
+            logo={'logo.png'}
+            mex={'HOME/Footer/Paises/mexico.png'}
+            esp={'HOME/Footer/Paises/españa.png'}
+            shopi={'HOME/Footer/Logos/logos-23.png'}
+            mms={'HOME/Footer/Logos/logos-24.png'}
+            goog={'HOME/Footer/Logos/logos-25.png'}
+            cloud={'HOME/Footer/Logos/logos-26.png'}
+          />
         </Layout>
         
       </div>

@@ -1,9 +1,15 @@
 import { tableForm } from './utils/Airtable'
 
 export default async (req, res) => {
-  const { completeName, email, phone, message } = req.body
+  const { completeName, email, phone, country, message, token } = req.body
   try {
-    const createdRecords = await tableForm.create([{ fields: { completeName, email, phone, message } }])
+    const createdRecords = await tableForm.create([{ fields: { completeName, email, phone, country, message, token } }])
+    const human = await humanValidate(token)
+    if (!human) {
+      res.statusCode = 400
+      res.json({ errors: ['NO HUMAN'] })
+      return
+    }
     const createdRecord = {
       id: createdRecords[0].id,
       fields: createdRecords[0].fields
@@ -15,4 +21,14 @@ export default async (req, res) => {
     res.statusCode = 500
     res.json({ msg: 'something whet wrong' })
   }
+}
+
+async function humanValidate (token) {
+  const secret = '6LdOf9QZAAAAALvpnxMdmkWMaqAoXOx853s7_voH'
+  const response = await fetch(`https://www.google.com/recaptcha/api/siteverify?secret=${secret}&response=${token}`, {
+    method: 'POST'
+  })
+  const data = await response.json()
+
+  return data.success
 }

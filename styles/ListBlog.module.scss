@@ -8,6 +8,7 @@
     }
     .blog_text{
         padding:0 50px;
+        cursor: pointer;
         a{
             text-decoration: none;
             h2{
@@ -45,4 +46,17 @@
         }
     }
 
+}
+
+@media (max-width:765px){
+    .blogs{
+        .blog_author_wrapper{
+            .author_img{
+                img{
+                    width:70%;
+                }
+            }
+        }
+    }
+    
 }

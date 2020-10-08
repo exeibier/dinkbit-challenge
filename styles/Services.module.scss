@@ -35,11 +35,24 @@
             .button{
                 text-align: center;
                 border: 2px solid #ffffff;
+                margin: 0 30px;
                 padding: 10px 40px;
+                font-weight: bold;
                 a {
                     text-decoration: none;
                     color: #ffffff;
+                    font-size: 20px;
+
                 }
+                span{
+                    svg{
+                        margin-left: 15px;
+                        width:20px;
+                        padding: 10px 0;
+                        
+                    }
+                }
+                
             }
         }
         .change_bar{
@@ -60,11 +73,14 @@
                 padding-right: 6px;
             }
             button{
-                height: 30px;
-                width: 1px;
+                height: 90px;
+                width: 4px;
                 background-color: transparent;
                 border: none;
-                cursor: pointer;
+                cursor: pointer; 
+            }
+            button:focus{
+                outline: none;
             }
             
         }
@@ -73,7 +89,8 @@
     }
 }
 
-@media (max-width: 750px){
+
+@media (max-width: 768px){
     .services{
         .left_section{
             display: block;
