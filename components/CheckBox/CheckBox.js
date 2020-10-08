@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 import styles from '../../styles/CheckBox.module.scss'
 class CheckBox extends Component {
   constructor (props) {
-    console.log(props.list)
     super(props)
   }
 

@@ -6,7 +6,7 @@ import Fade from 'react-reveal/Fade'
 
 function Projects (props) {
   return (
-    <div className={`${styles.projects_container} container`}>
+    <div className={`${styles.projects_container} container`} id='projects'>
       <div className='row'>
         <div className={`${styles.project_box} col-12 col-lg-6`}>
           <Fade top>

@@ -23,14 +23,12 @@ import Footer from '../components/Footer/Footer'
 
 class Blog extends Component {
   constructor(props){
-    console.log(props.allBlogs)
     super(props)
     this.state ={
       sideButtonOpener: false,
       filterBlog: '',
       filteredBlogs: props.allBlogs
     };
-    console.log(props.allBlogs)
     this.onClickPostHandler = this.onClickPostHandler.bind(this)
   }
   hamburguerToggleHandler = () =>{

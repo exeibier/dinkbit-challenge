@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from '../../styles/MenuDark.module.scss'
-
 import HamburguerButton from '../Hamburguer/HamburguerButton'
 
 const Menu = props => (

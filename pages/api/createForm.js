@@ -4,7 +4,7 @@ export default async (req, res) => {
   const { completeName, email, phone, country, message, token } = req.body
   try {
     const createdRecords = await tableForm.create([{ fields: { completeName, email, phone, country, message, token } }])
-    const human = await validateHuman(token)
+    const human = await humanValidate(token)
     if (!human) {
       res.statusCode = 400
       res.json({ errors: ['NO HUMAN'] })
@@ -23,7 +23,7 @@ export default async (req, res) => {
   }
 }
 
-async function validateHuman (token) {
+async function humanValidate (token) {
   const secret = '6LdOf9QZAAAAALvpnxMdmkWMaqAoXOx853s7_voH'
   const response = await fetch(`https://www.google.com/recaptcha/api/siteverify?secret=${secret}&response=${token}`, {
     method: 'POST'

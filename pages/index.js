@@ -23,7 +23,6 @@ import Footer from '../components/Footer/Footer'
 class Home extends Component {
   constructor(props){
     super(props)
-    console.log(props.allBlogs)
     this.state = {
       sideButtonOpener: false
 

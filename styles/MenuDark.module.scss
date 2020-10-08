@@ -29,7 +29,8 @@ $dinkbit-color: #018cf2;
                 font-size: 15px;
             }
             a:hover {
-                color: $dinkbit-color;
+                border-bottom: 2px solid #ffffff;
+
             }
             ul{
                 list-style-type: none;
@@ -38,11 +39,12 @@ $dinkbit-color: #018cf2;
                 display: flex;
 
                 li{
-                    padding: 5px 1.5rem;
+                    margin: 10px 1.5rem;
                 }
                 .blog_menu{
                     background-color: #ffffff;
                     padding: 5px 20px;
+                    margin: 5px 0;
                     a{
                         color: $dinkbit-color;
                     };

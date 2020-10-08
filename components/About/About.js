@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
-
 import styles from '../../styles/About.module.scss'
 import { Carousel } from 'react-bootstrap'
 
 class About extends Component {
   render () {
     return (
-      <div className={`${styles.background_about}`}>
+      <div className={`${styles.background_about}`} id='/#about'>
         <Carousel controls={false}>
           <Carousel.Item>
             <div className='container'>

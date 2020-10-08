@@ -1,6 +1,9 @@
 import React from 'react'
 
 import styles from '../../styles/Newsletter.module.scss'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import Fade from 'react-reveal/Fade'
 
 const Newsletter = () => {
@@ -19,7 +22,7 @@ const Newsletter = () => {
           </div>
           <div className={`${styles.newsletter_right} col-12 col-lg-6`}>
             <div className={styles.newsletter_img}>
-              <Fade right>
+              <Fade left>
                 <img src='BLOG/Newsletter/newsletter.png' />
               </Fade>
             </div>

@@ -17,7 +17,6 @@ import Footer from '../../components/Footer/Footer'
 class BlogPage extends Component{
   constructor(props){
     super(props)
-    console.log(props.singleBlog)
   }
   state = {
     sideButtonOpener: false
