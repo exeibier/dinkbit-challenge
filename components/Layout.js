@@ -7,7 +7,10 @@ const Layout = ({ children }) => {
       <Head>
         <title>Dinkbit</title>
         <link rel='icon' href='/favicon.ico' />
-        <script src='https://www.google.com/recaptcha/api.js' async defer />
+        <meta name='description' content='Dinkbit agencia de desarrollo y marketing hará crecer tu empresa mejorando su branding y presencia digital' />
+        <meta property='og:title' content='Conoce dinkbit y las mejores prácticas de diseño y desarrollo en nuestro blog ' />
+        <meta property='og:site_name' content='Dinkbit Blog' />
+
       </Head>
       <div>
         {children}

@@ -26,11 +26,18 @@
                 text-decoration: none;
                 color: #000000;
                 width: 100%;
+                span{
+                    svg{
+                        margin-left: 15px;
+                        width:20px;
+                        padding: 10px 0;
+                    }
+                }
             }
     }
 }
 
-@media (max-width:750px){
+@media (max-width:765px){
     .clients_container {
     
         .clients_text{
@@ -40,7 +47,7 @@
     
                 .clients_button {
                     padding: 15px 55px;
-                    margin: 40px 20% ;
+                    margin:17% ;
                 }
                 a{
                     font-size: 20px;

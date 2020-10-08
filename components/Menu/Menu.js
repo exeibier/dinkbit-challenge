@@ -4,8 +4,8 @@ import styles from '../../styles/Menu.module.scss'
 import HamburguerButton from '../Hamburguer/HamburguerButton'
 
 const Menu = props => (
-  <header className={styles.menu}>
-    <nav className={styles.menuNav}>
+  <header className={`${styles.menu}`}>
+    <nav className={`${styles.menuNav}`}>
       <div className={styles.menu_toggle_button}>
         <HamburguerButton click={props.hamburguerClickHandler} />
       </div>
@@ -19,8 +19,8 @@ const Menu = props => (
           <li><a href='/'>Nosotros</a></li>
           <li><a href='/'>¿Qué hacemos?</a></li>
           <li><a href='/'>Proyectos</a></li>
-          <li><a href='/'>Contacto</a></li>
-          <li><a href='/blog'>Blog</a></li>
+          <li><a href='/contacto'>Contacto</a></li>
+          <li className={styles.blog_menu}><a href='/blog'>Blog</a></li>
         </ul>
       </div>
     </nav>

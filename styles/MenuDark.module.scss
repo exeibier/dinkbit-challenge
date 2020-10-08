@@ -6,6 +6,8 @@ $dinkbit-color: #018cf2;
     top: 0;
     right: 0;
     z-index: 999;
+    background-color: #1a1a1a;
+    padding-bottom: 20px;
     .menuNav{
         display: flex;
         align-items: center;
@@ -31,12 +33,19 @@ $dinkbit-color: #018cf2;
             }
             ul{
                 list-style-type: none;
-                margin: 0;
-                padding: 0;
+                margin-top: 20px;
+                padding-top: 10px;
                 display: flex;
 
                 li{
-                    padding: 0 1.5rem;
+                    padding: 5px 1.5rem;
+                }
+                .blog_menu{
+                    background-color: #ffffff;
+                    padding: 5px 20px;
+                    a{
+                        color: $dinkbit-color;
+                    };
                 }
             }
         }

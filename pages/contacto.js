@@ -12,10 +12,14 @@ import Footer from '../components/Footer/Footer'
 
 
 class ContactUs extends Component {
+  constructor(props){
+    super(props)
+    this.state= {
+      sideButtonOpener: false
 
-  state = {
-    sideButtonOpener: false
-  };
+    }
+  }
+ 
   hamburguerToggleHandler = () =>{
     this.setState((prevState) =>{
       return{ sideButtonOpener: !prevState.sideButtonOpener}
@@ -39,7 +43,15 @@ class ContactUs extends Component {
         {backdrop }
         <Layout> 
            <Contact/>       
-          <Footer />
+          <Footer
+              logo={'logo.png'}
+              mex={'HOME/Footer/Paises/mexico.png'}
+              esp={'HOME/Footer/Paises/españa.png'}
+              shopi={'HOME/Footer/Logos/logos-23.png'}
+              mms={'HOME/Footer/Logos/logos-24.png'}
+              goog={'HOME/Footer/Logos/logos-25.png'}
+              cloud={'HOME/Footer/Logos/logos-26.png'}
+          />
         </Layout>
         
       </div>

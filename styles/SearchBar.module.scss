@@ -1,0 +1,23 @@
+.sidebar_search{
+    width: 100%;
+    position: relative;
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 40px;
+    .searchTerm {
+        width: 80%;
+        border: 3px solid gray;
+        padding: 10px;
+        border-radius: 1px 0 0 1px;
+        outline: none;
+        color: gray;
+
+      }
+      .searchTerm:focus{
+        color: gray;
+      }
+      svg {
+        width: 15px;
+        margin-right: 5px;
+      }
+}

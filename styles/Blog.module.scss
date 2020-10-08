@@ -34,10 +34,7 @@ $dinkbit-color: #018cf2;
     .sidebar{        
     position: sticky;
     order: 2;
-        .sidebar_search{
-            padding: 20px 0;
-            border-bottom: 1px solid lightgray;
-        }
+        
         .sidebar_content{
             padding-top: 10px;
             border-bottom: 1px solid lightgray;
@@ -104,32 +101,9 @@ $dinkbit-color: #018cf2;
         }
        
     }
-    .blog_author_wrapper{
-        padding: 0 50px;
-        .author_img{
-            padding:20px;
-            img{
-                width:40%;
-            }
-        }
-        .author_text{
-            padding:20px;
-            p{
-                margin:0;
-                
-            }
-            .author_name{
-                font-weight: bold;
-            }
-            .author_date{
-                color: grey;
-            }
-        }
-    }
-
 }
 
-@media (max-width: 750px){
+@media (max-width: 765px){
     .title{
         h2 {
             font-size: 50px;
